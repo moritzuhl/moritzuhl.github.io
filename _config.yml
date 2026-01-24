@@ -23,7 +23,7 @@ repository               : "moritzuhl/moritzuhl.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "itsame.png"
+  avatar           : "itsame.jpg"
   name             : "Moritz Uhl"
   pronouns         : # example: "she/her"  
   bio              : "Doctoral candidate"
