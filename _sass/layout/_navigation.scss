@@ -205,6 +205,7 @@
   .visible-links {
     display: flex;
     align-items: center;
+    width: 100%;
 
     li {
       display: block;
@@ -225,9 +226,10 @@
       }
     }
 
-    #theme-toggle {
+    #theme-toggle,
+    .persist.tail {
       margin-left: auto;
-      
+
       a {
         width: 25px;
         display: flex;
