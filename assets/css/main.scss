@@ -41,3 +41,25 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* Allow citation links to wrap properly */
+
+.citation a {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Define list style */
+
+.ongoing-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  padding-left: 0;
+}
+
+/* Define option to collapse spacing between lines */
+
+.tight-lines {
+  line-height: 1.2;
+}
