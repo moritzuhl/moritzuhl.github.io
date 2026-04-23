@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Doctoral candidate"
   location         : "WU Vienna"
-  employer         : "WIFO"
+  employer         : # ""
   uri              : # URL
   email            : "moritz.uhl@s.wu.ac.at" 
 
