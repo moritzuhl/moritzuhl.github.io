@@ -11,7 +11,7 @@ redirect_from:
 
 <ul class="ongoing-list">
   <li class="tight-lines"><em>'Coherent Voices? Sentiment in Euro Area Central Bank Communication'</em></li>
-  <li class="tight-lines"><em>'Revisiting the Mechanics Behind the Distributional Impact of Japan's Monetary Policy Easing: Is There a Channel Missing?'</em></li>
+  <li class="tight-lines"><em>'Revisiting the Mechanics Behind the Distributional Impact of Japan's Monetary Policy Easing: Evidence Beyond Common Transmission Channels'</em></li>
 </ul>
 
 ## Working Paper
