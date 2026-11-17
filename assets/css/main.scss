@@ -95,3 +95,9 @@
 .tight-lines {
   line-height: 1.2;
 }
+
+/* Remove margin from the first h2 heading in untitled pages */
+
+.page.page--untitled .page__content > h2:first-child {
+  margin-top: 0;
+}
