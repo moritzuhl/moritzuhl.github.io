@@ -10,11 +10,12 @@ redirect_from:
 ## Ongoing Research
 
 <ul class="tiles">
-  <li class="tight-lines"><em>'Coherent Voices? Sentiment in Euro Area Central Bank Communication'</em></li>
-  <li class="tight-lines"><em>'Revisiting the Mechanics Behind the Distributional Impact of Japan's Monetary Policy Easing: Evidence Beyond Common Transmission Channels'</em></li>
+<li class="tight-lines"><em>Drivers of Heterogeneous Distributional Effects of Monetary Policy Shocks across the Euro Area</em></li>
+  <li class="tight-lines"><em>Coherent Voices? Sentiment in Euro Area Central Bank Communication</em></li>
+  <li class="tight-lines"><em>Revisiting the Mechanics Behind the Distributional Impact of Japan's Monetary Policy Easing: Evidence Beyond Common Transmission Channels</em></li>
 </ul>
 
-## Working Paper
+## Working Papers
 
 <ul class="tiles">
   <li>
