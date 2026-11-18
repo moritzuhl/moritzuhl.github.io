@@ -192,7 +192,7 @@
   button {
     position: absolute;
     height: 2.5rem;
-    right: 0;
+    right: 2.5rem;
     padding: 0 0.5rem;
     border: 0;
     outline: none;
@@ -204,11 +204,15 @@
   }
 
   .visible-links {
-    display: table;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 2.5rem;
 
     li {
-      display: table-cell;
+      display: flex;
       vertical-align: middle;
+      align-items: center;
 
       &:first-child {
         font-weight: bold;
@@ -226,6 +230,10 @@
       }
     }
 
+    .masthead__menu-item--lg {
+      margin-right: auto;
+    }
+
     #theme-toggle,
     .persist.tail {
       position: absolute;
@@ -241,6 +249,14 @@
         cursor: pointer;
         padding: 0;
         margin: 0;
+
+        &:before {
+          display: none;
+        }
+
+        &:hover:before {
+          transform: none;
+        }
       }
     }
 
