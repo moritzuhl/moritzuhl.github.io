@@ -7,7 +7,7 @@
   align-items: flex-start;
   gap: var(--topstrip-spacing);
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 2em;
   padding: 0;
   flex-wrap: wrap;
   font-family: $sans-serif;
@@ -141,12 +141,14 @@
       grid-column: 2;
       grid-row: 3;
       align-self: start;
-      max-width: 36rem;
+      max-width: none;
       width: 100%;
       margin: 0;
       color: var(--global-text-color);
       font-size: $type-size-6;
       line-height: 1.1;
+      text-align: justify;
+      text-justify: inter-word;
     }
   }
 
