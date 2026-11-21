@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : ""
 title_separator          : "-"
 name                     : &name "Moritz Uhl"
-description              : &description "I am a doctoral student at the Vienna University of Economics and Business. My main research interests centre around (un)conventional monetary policy, including its distributional side-effects and central bank communication as a policy tool." # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "I am a doctoral student at the Vienna University of Economics and Business. My main research interests centre around conventional and unconventional monetary policy, with a particular focus on their distributional side-effects, as well as the role of central bank communication as a policy tool." # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://moritzuhl.github.io # The base hostname & protocol for your site e.g. 
                                                        # "https://[your GitHub username].github.io",
                                                        # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
