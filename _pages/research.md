@@ -7,9 +7,9 @@ author_profile: true
 ## Ongoing Research
 
 <ul class="tiles">
-<li class="tight-lines"><em>Drivers of Heterogeneous Distributional Effects of Monetary Policy Shocks across the Euro Area</em></li>
-  <li class="tight-lines"><em>Coherent Voices? Sentiment in Euro Area Central Bank Communication</em></li>
-  <li class="tight-lines"><em>Revisiting the Mechanics Behind the Distributional Impact of Japan's Monetary Policy Easing: Evidence Beyond Common Transmission Channels</em></li>
+<li class="tight-lines">Drivers of Heterogeneous Distributional Effects of Monetary Policy Shocks across the Euro Area</li>
+  <li class="tight-lines">Coherent Voices? Sentiment in Euro Area Central Bank Communication</li>
+  <li class="tight-lines">Revisiting the Mechanics Behind the Distributional Impact of Japan's Monetary Policy Easing: Evidence Beyond Common Transmission Channels</li>
 </ul>
 
 ## Working Papers
