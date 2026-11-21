@@ -19,13 +19,13 @@ url                      : https://moritzuhl.github.io # The base hostname & pro
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "moritzuhl/moritzuhl.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
+# Site Author - The following control what appears in the profile top strip.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
   avatar           : "itsame.jpg"
-  name             : " "
+  name             : "Moritz Uhl"
   pronouns         : # example: "she/her"  
   bio              : "Doctoral student"
   location         : "WU Vienna"

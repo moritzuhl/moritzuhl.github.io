@@ -5,6 +5,13 @@ html {
   /* sticky footer fix */
   position: relative;
   min-height: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 }
 
 body {
@@ -13,6 +20,9 @@ body {
   background-color: var(--global-bg-color);
 
   margin: 0;
+  overflow-x: clip;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   padding: $masthead-height 0 0;
   padding-bottom: 9em;
   font-family: $global-font-family;
@@ -21,6 +31,11 @@ body {
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 }
 

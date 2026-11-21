@@ -34,11 +34,7 @@
     font-size: $type-size-6;
 
     @include breakpoint($large) {
-      @include span(10 of 12 last);
-    }
-
-    @include breakpoint($x-large) {
-      @include prefix(0.5 of 12);
+      @include span(12 of 12);
     }
   }
 
@@ -200,7 +196,7 @@
     color: var(--global-text-color);
     cursor: pointer;
     z-index: 100;
-    display: none; /* hidden burger menu */
+    display: none !important; /* hidden burger menu */
   }
 
   .visible-links {
@@ -309,29 +305,11 @@
     }
 
     &:before {
-      content: "";
-      position: absolute;
-      top: -11px;
-      right: 10px;
-      width: 0;
-      border-style: solid;
-      border-width: 0 10px 10px;
-      border-color: var(--global-border-color) transparent;
-      display: block;
-      z-index: 0;
+      display: none;
     }
 
     &:after {
-      content: "";
-      position: absolute;
-      top: -10px;
-      right: 10px;
-      width: 0;
-      border-style: solid;
-      border-width: 0 10px 10px;
-      border-color: var(--global-bg-color) transparent;
-      display: block;
-      z-index: 1;
+      display: none;
     }
 
     li {

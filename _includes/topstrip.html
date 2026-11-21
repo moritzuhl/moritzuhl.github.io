@@ -1,0 +1,11 @@
+{% include base_path %}
+
+{% if page.author_profile or layout.author_profile %}
+  <aside class="topstrip" aria-label="Profile and page links">
+    {% if page.author_profile or layout.author_profile %}
+      <div class="topstrip__profile">
+        {% include author-profile.html %}
+      </div>
+    {% endif %}
+  </aside>
+{% endif %}

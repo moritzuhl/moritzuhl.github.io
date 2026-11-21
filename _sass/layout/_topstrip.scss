@@ -1,0 +1,222 @@
+.topstrip {
+  --topstrip-avatar-width: clamp(112px, calc(80px + 5.333333vw), 144px);
+  --topstrip-spacing: clamp(14px, calc(8px + 1vw), 20px);
+  --topstrip-row-spacing: clamp(4px, calc(2.666667px + 0.222222vw), 4.8px);
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--topstrip-spacing);
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0;
+  flex-wrap: wrap;
+  font-family: $sans-serif;
+
+  .topstrip__profile {
+    height: auto;
+    min-width: 0;
+    max-width: none;
+    flex: 1 1 100%;
+    margin: 0;
+    padding: 0 !important;
+    float: none;
+    position: static;
+    overflow: visible;
+
+    > [itemscope] {
+      display: grid;
+      grid-template-columns: var(--topstrip-avatar-width) minmax(0, 1fr);
+      grid-template-rows: max-content max-content max-content;
+      column-gap: var(--topstrip-spacing);
+      row-gap: var(--topstrip-row-spacing);
+      align-items: stretch;
+    }
+
+    .author__avatar {
+      grid-column: 1;
+      grid-row: 1 / 4;
+      display: block;
+      width: var(--topstrip-avatar-width);
+      height: auto;
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        border: 1px solid var(--global-border-color);
+        border-radius: 50%;
+      }
+    }
+
+    .author__content {
+      grid-column: 2;
+      grid-row: 1;
+      display: block;
+      align-self: start;
+      width: auto;
+      padding: 0;
+      line-height: 1.1;
+    }
+
+    .author__urls-wrapper {
+      grid-column: 2;
+      grid-row: 2;
+      display: block;
+      align-self: start;
+      width: auto;
+      margin: 0;
+    }
+
+    .author__urls {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      column-gap: clamp(6px, 1vw, 12px);
+      row-gap: clamp(2px, 0.333333vw, 4px);
+      position: static;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        font-size: $type-size-6;
+        line-height: 1.1;
+      }
+
+      li:not(:last-child)::after {
+        content: "\00b7";
+        margin-left: clamp(6px, 1vw, 12px);
+      }
+
+      .author__desktop {
+        display: flex;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        color: var(--global-text-color);
+        font-size: $type-size-5;
+        line-height: 1.1;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .icon-pad-right {
+        flex: 0 0 1.25em;
+        width: 1.25em;
+        margin: 0 0.35em 0 0;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.25em;
+        line-height: 1.1;
+        text-align: center;
+      }
+    }
+
+    .author__name {
+      margin: 0;
+      font-family: $sans-serif-narrow;
+      font-size: $type-size-4;
+      font-weight: bold;
+      line-height: 1.1;
+    }
+
+    .author__description {
+      grid-column: 2;
+      grid-row: 3;
+      align-self: start;
+      max-width: 36rem;
+      width: 100%;
+      margin: 0;
+      color: var(--global-text-color);
+      font-size: $type-size-6;
+      line-height: 1.1;
+    }
+  }
+
+  .topstrip__section,
+  .topstrip__navigation {
+    flex: 0 1 auto;
+  }
+
+  .topstrip__section {
+    display: flex;
+    align-items: center;
+    gap: clamp(4px, 0.666667vw, 8px);
+
+    img {
+      max-width: 3.5em;
+    }
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h3 {
+      font-family: $sans-serif-narrow;
+      font-size: $type-size-5;
+    }
+
+    p,
+    li {
+      font-family: $sans-serif;
+      font-size: $type-size-6;
+      line-height: 1.5;
+    }
+  }
+
+  .topstrip__navigation {
+    .nav__list {
+      margin: 0;
+    }
+
+    .nav__list ul,
+    .nav__list li {
+      display: block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav__title {
+      margin: 0;
+      font-family: $sans-serif-narrow;
+      font-size: $type-size-5;
+      font-weight: bold;
+    }
+
+    .nav__sub-title {
+      display: block;
+      margin: 0;
+      padding: 0.125em 0;
+      font-family: $sans-serif-narrow;
+      font-size: $type-size-6;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 0;
+    }
+
+    .nav__list li a {
+      display: block;
+      padding: 0.125em 0;
+    }
+  }
+
+}
