@@ -114,8 +114,15 @@
         line-height: 1.1;
         text-decoration: none;
 
-        &:hover {
-          text-decoration: underline;
+        &:hover .icon-pad-right,
+        &:focus-visible .icon-pad-right {
+          transform: translateY(-1px);
+        }
+
+        &:focus-visible {
+          outline: 2px solid var(--global-link-color-hover);
+          outline-offset: 3px;
+          border-radius: 2px;
         }
       }
 
@@ -130,6 +137,7 @@
         height: 1.25em;
         line-height: 1.1;
         text-align: center;
+        transition: transform 140ms ease;
       }
     }
 
@@ -225,4 +233,15 @@
     }
   }
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topstrip .topstrip__profile .author__urls .icon-pad-right {
+    transition: none;
+  }
+
+  .topstrip .topstrip__profile .author__urls a:hover .icon-pad-right,
+  .topstrip .topstrip__profile .author__urls a:focus-visible .icon-pad-right {
+    transform: none;
+  }
 }
