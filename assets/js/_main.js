@@ -87,10 +87,71 @@ if (plotlyElements.length > 0) {
 
 $(document).ready(function () {
   // SCSS SETTINGS - These should be the same as the settings in the relevant files 
-  const scssLarge = 925;          // pixels, from /_sass/_themes.scss
-  const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
+  const scssLarge = 925; // pixels, from /_sass/_themes.scss
+  const scssMastheadHeight = 70; // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
-  // If the user hasn't chosen a theme, follow the OS preference
+  // Hide profile description when it extends below the profile image
+  const topstripProfiles = document.querySelectorAll(".topstrip__profile");
+  let topstripUpdateFrame = null;
+
+  const updateTopstripDescriptions = () => {
+    topstripProfiles.forEach((profile) => {
+      const avatar = profile.querySelector(".author__avatar img");
+      const description = profile.querySelector(".author__description");
+      if (!avatar || !description) {
+        return;
+      }
+
+      profile.classList.remove("topstrip--description-hidden");
+      const avatarBottom = avatar.getBoundingClientRect().bottom;
+      const descriptionBottom = description.getBoundingClientRect().bottom;
+      profile.classList.toggle(
+        "topstrip--description-hidden",
+        avatarBottom > 0 && descriptionBottom > avatarBottom + 0.5
+      );
+    });
+  };
+
+  const scheduleTopstripUpdate = () => {
+    if (topstripUpdateFrame !== null) {
+      cancelAnimationFrame(topstripUpdateFrame);
+    }
+    topstripUpdateFrame = requestAnimationFrame(() => {
+      topstripUpdateFrame = null;
+      updateTopstripDescriptions();
+    });
+  };
+
+  if (topstripProfiles.length > 0) {
+    topstripProfiles.forEach((profile) => {
+      profile.querySelectorAll("img").forEach((image) => {
+        image.addEventListener("load", scheduleTopstripUpdate, { once: true });
+      });
+    });
+
+    if ("ResizeObserver" in window) {
+      const topstripObserver = new ResizeObserver(scheduleTopstripUpdate);
+      topstripProfiles.forEach((profile) => {
+        topstripObserver.observe(profile);
+        const avatar = profile.querySelector(".author__avatar");
+        const description = profile.querySelector(".author__description");
+        if (avatar) {
+          topstripObserver.observe(avatar);
+        }
+        if (description) {
+          topstripObserver.observe(description);
+        }
+      });
+    }
+
+    jQuery(window).on("resize", scheduleTopstripUpdate);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(scheduleTopstripUpdate);
+    }
+    scheduleTopstripUpdate();
+  }
+
+  // Follow the OS preference if no theme is selected
   setTheme();
   window.matchMedia('(prefers-color-scheme: dark)')
         .addEventListener("change", (e) => {

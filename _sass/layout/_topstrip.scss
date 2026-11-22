@@ -32,6 +32,10 @@
       align-items: stretch;
     }
 
+    &.topstrip--description-hidden .author__description {
+      display: none;
+    }
+
     .author__avatar {
       grid-column: 1;
       grid-row: 1 / 4;
