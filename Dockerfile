@@ -5,6 +5,7 @@ FROM ruby:3.2
 RUN apt-get update && apt-get install -y \
     build-essential \
     nodejs \
+    npm \
     && rm -rf /var/lib/apt/lists/*
 
 
@@ -21,8 +22,8 @@ RUN chown -R vscode:vscode /usr/src/app
 # Switch to the non-root user
 USER vscode
 
-# Copy Gemfile into the container (necessary for `bundle install`)
-COPY Gemfile ./
+# Copy the locked Ruby dependencies
+COPY Gemfile Gemfile.lock ./
 
 
 
